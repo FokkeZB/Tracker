@@ -1,0 +1,7 @@
+<Alloy>
+	<TabGroup>
+		<Require src="tracker" />
+		<Require src="rides" />
+		<Require src="settings" />
+	</TabGroup>
+</Alloy>

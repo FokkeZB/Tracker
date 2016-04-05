@@ -1,0 +1,8 @@
+<Alloy>
+	<Window id="win" title="Map">
+		<ActionBar platform="android" displayHomeAsUp="true" onHomeIconItemSelected="close" />
+
+		<Require src="partials/map" id="map" class="map" />
+
+	</Window>
+</Alloy>

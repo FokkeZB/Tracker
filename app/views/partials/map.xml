@@ -1,0 +1,6 @@
+<!-- Map that renders a route to be used on several places -->
+<Alloy>
+  <Collection src="data" instance="true" id="data" />
+
+  <View id="map" class="map" module="ti.map" />
+</Alloy>

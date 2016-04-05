@@ -1,0 +1,23 @@
+<resources>
+  <string name="Tracker">Tracker</string>
+  <string name="Rides">Ritten</string>
+  <string name="Settings">Instellingen</string>
+
+  <string name="Unavailable">Niet Beschikbaar</string>
+  <string name="Time">Tijd</string>
+  <string name="Latitude">Breedtegraad</string>
+  <string name="Longitude">Hoogtegraad</string>
+  <string name="LocationAccuracy">Nauwkeurigheid Positie</string>
+  <string name="Altitude">Hoogte</string>
+  <string name="AltitudeAccuracy">Nauwkeurigheid Hoogte</string>
+  <string name="Heading">Richting</string>
+  <string name="Speed">Snelheid</string>
+
+  <string name="Units">Eenheden</string>
+  <string name="Metric">Metrische</string>
+  <string name="Imperial">Engelse</string>
+
+  <string name="About">Over RideTracker</string>
+  <string name="About_Body">Deze app wordt [Open Source](https://github.com/fokkezb) ontwikkeld door [Appcelerator](http://www.appcelerator.com) Developer Evangelist [Fokke Zandbergen](http://fokkezb.nl). In juni 2016 hoopt hij [400km te fietsen](http://fokkezb.nl/rwanda) door Rwanda en €10.000 te werven voor het werk van [Compassion](https://www.compassion.nl/): "Kinderen bevrijden van armoede in Jezus' naam".</string>
+  <string name="Donate">Info &amp; Donaties</string>
+</resources>

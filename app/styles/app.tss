@@ -1,0 +1,94 @@
+"Window": {
+	backgroundColor: "#FFF",
+}
+
+"Window[platform=ios]": {
+
+	// Style the TabGroup"s navigation bar
+	barColor: Alloy.CFG.colors.brand,
+	navTintColor: "#FFF",
+	translucent: false,
+	titleAttributes: {
+		color: "#FFF"
+	}
+}
+
+"MenuItem[platform=android]": {
+	showAsAction: Ti.Android.SHOW_AS_ACTION_ALWAYS
+}
+
+"Label": {
+	color: Alloy.CFG.colors.grayDarker
+}
+
+"ListItem": {
+	color: Alloy.CFG.colors.grayDarker
+}
+
+// Set up all ScrollViews to have a vertical layout
+"ScrollView": {
+	scrollType: "vertical",
+	contentWidth: Ti.UI.FILL,
+	contentHeight: Ti.UI.SIZE,
+	layout: "vertical"
+}
+
+"ListView": {
+	defaultItemTemplate: "tpl"
+}
+
+"ListView[platform=android]": {
+  separatorColor: Alloy.CFG.colors.grayLight
+}
+
+// HELPER CLASSES
+
+".sectionSeparator[platform=android]": {
+  height: 10,
+  backgroundGradient: {
+    type: "linear",
+    startPoint: { x: "0%", y: "0%" },
+    endPoint: { x: "0%", y: "100%" },
+    colors: [{color: Alloy.CFG.colors.grayLight, offset: 0}, {color: "#FFFFFF", offset: 0.6}, {color: "#FFFFFF", offset: 0.8}, {color: Alloy.CFG.colors.grayLight, offset: 1.0}]
+  }
+}
+
+".rowPadding": {
+  top: Alloy.CFG.verRowPadding,
+  right: Alloy.CFG.horRowPadding,
+  bottom: Alloy.CFG.verRowPadding,
+  left: Alloy.CFG.horRowPadding,
+  height: Ti.UI.SIZE
+}
+
+".icon": {
+	font: {
+		fontFamily: "FontAwesome"
+	}
+}
+
+".details": {
+  height: Ti.UI.SIZE,
+
+  layout: "vertical",
+}
+
+".label": {
+  left: Alloy.CFG.horRowPadding,
+  top: Alloy.CFG.horRowPadding,
+  right: Alloy.CFG.horRowPadding,
+
+  font: {
+    fontWeight: "bold"
+  },
+  color: Alloy.CFG.colors.gray
+}
+
+".value": {
+  left: Alloy.CFG.horRowPadding,
+  top: Alloy.CFG.verRowPadding,
+  right: Alloy.CFG.horRowPadding,
+  bottom: Alloy.CFG.horRowPadding,
+
+  height: Ti.UI.SIZE
+}

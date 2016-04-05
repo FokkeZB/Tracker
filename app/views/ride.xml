@@ -1,0 +1,45 @@
+<Alloy>
+	<Model src="ride" instance="true" id="ride" />
+
+	<Window id="win" title="{$.ride.fromTimeFormatted}">
+
+		<ActionBar platform="android" displayHomeAsUp="true" onHomeIconItemSelected="close" />
+		<Menu platform="android">
+			<MenuItem title="Delete" onClick="confirmToDeleteRide" />
+		</Menu>
+
+		<RightNavButton platform="ios">
+			<Button systemButton="TRASH" onClick="confirmToDeleteRide" />
+		</RightNavButton>
+
+		<ScrollView>
+
+			<Require src="partials/map" rideId="{$.ride.id}" class="map" />
+
+			<View platform="android" class="sectionSeparator" />
+
+			<View class="details">
+				<Label class="label">From:</Label>
+				<Label class="value" text="{$.ride.fromTimeFormatted}" />
+				<Label class="label">To:</Label>
+				<Label class="value" text="{$.ride.toTimeFormatted}" />
+			</View>
+
+			<ListView class="views" onItemclick="openView">
+				<HeaderView platform="android">
+					<View class="sectionSeparator" />
+				</HeaderView>
+				<Templates>
+					<Require src="partials/listTemplate" />
+				</Templates>
+				<ListSection>
+					<ListItem class="view" itemId="data" title:text="Data" />
+					<ListItem class="view" itemId="map" title:text="Map" />
+				</ListSection>
+			</ListView>
+
+		</ScrollView>
+
+	</Window>
+
+</Alloy>

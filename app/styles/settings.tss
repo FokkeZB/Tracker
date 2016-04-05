@@ -1,0 +1,55 @@
+/**
+ * Lots of platform specific stuff going on hear and in the XML to get the
+ * right result on both platforms from a single source.
+ */
+
+// IOS
+
+"TableView[platform=ios]": {
+  style: Ti.UI.iPhone.TableViewStyle.GROUPED
+}
+
+"TableViewRow[platform=ios]": {
+  selectionStyle: Ti.UI.iPhone.TableViewCellSelectionStyle.NONE
+}
+
+".unitsSection[platform=ios]": {
+   headerTitle: L("Units")
+}
+
+".aboutSection[platform=ios]": {
+   headerTitle: L("About")
+}
+
+// ANDROID
+
+".headerView[platform=android]": {
+  height: 40
+}
+
+".headerViewLabel[platform=android]": {
+  color: Alloy.CFG.colors.brandDark,
+  font: {
+    fontWeight: "bold"
+  }
+}
+
+".iconCheck[platform=android]": {
+  right: Alloy.CFG.horRowPadding,
+  text: Alloy.Globals.icons.check,
+  color: Alloy.CFG.colors.brandDark,
+  visible: false
+}
+
+// SHARED
+
+".donateBtn": {
+  height: 40,
+
+  tintColor: "white",
+  backgroundColor: Alloy.CFG.colors.brand,
+  font: {
+    fontSize: 20,
+    fontWeight: "bold"
+  }
+}

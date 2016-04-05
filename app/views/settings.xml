@@ -1,0 +1,44 @@
+<Alloy>
+  <Tab icon="/images/tabIcon_settings.png" titleid="Settings">
+    <Window titleid="Settings">
+      <TableView>
+
+        <!-- Notice the combination of platform specific tags -->
+
+        <TableViewSection class="unitsSection">
+          <HeaderView platform="android">
+            <View class="headerView">
+              <Label class="headerViewLabel rowPadding" textid="Units" />
+            </View>
+          </HeaderView>
+          <TableViewRow id="metric" onClick="setSystem">
+            <Label class="rowPadding" textid="Metric" />
+            <Label platform="android" id="metricCheck" class="icon iconCheck" />
+          </TableViewRow>
+          <TableViewRow id="imperial" onClick="setSystem">
+            <Label class="rowPadding" textid="Imperial" />
+            <Label platform="android" id="imperialCheck" class="icon iconCheck" />
+          </TableViewRow>
+          <FooterView platform="android">
+            <View class="sectionSeparator" />
+          </FooterView>
+        </TableViewSection>
+
+        <TableViewSection class="aboutSection">
+          <HeaderView platform="android">
+            <View class="headerView">
+              <Label class="headerViewLabel rowPadding" textid="About" />
+            </View>
+          </HeaderView>
+          <TableViewRow>
+            <Label id="aboutBody" class="rowPadding" onLink="onLink" />
+          </TableViewRow>
+          <TableViewRow>
+            <Button class="donateBtn rowPadding" titleid="Donate" onClick="openDonate" />
+          </TableViewRow>
+        </TableViewSection>
+
+      </TableView>
+    </Window>
+  </Tab>
+</Alloy>

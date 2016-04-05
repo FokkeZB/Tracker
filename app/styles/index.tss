@@ -1,0 +1,4 @@
+"TabGroup[platform=ios]": {
+	tabsBackgroundColor: "white",
+	tabsTintColor: Alloy.CFG.colors.brand
+}

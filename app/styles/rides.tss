@@ -1,0 +1,7 @@
+"ListItem": {
+  accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
+}
+
+"ListItem[platform=ios]": {
+  canEdit: true
+}

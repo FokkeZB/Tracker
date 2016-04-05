@@ -1,0 +1,40 @@
+{
+  "global": {
+    "colors": {
+      "brandLighter": "#B4D6F6",
+      "brandLight": "#0076E8",
+      "brand": "#0054a6",
+      "brandDark": "#004486",
+      "grayLight": "#E0E0E0",
+      "gray": "#858585",
+      "grayDarker": "#333"
+    },
+    "minUpdateDistance": 1,
+    "trackDelta": 0.075,
+    "pointDelta": 0.5,
+    "settings": {
+      "system": {
+        "type": "string",
+        "def": "metric"
+      }
+    },
+    "imperialCountries": ["US", "MMR", "LBR", "GB"],
+    "verRowPadding": 10,
+    "horRowPadding": 10
+  },
+  "env:development": {},
+  "env:test": {},
+  "env:production": {},
+  "os:android": {
+    "accuracy": 10,
+    "minAge": 1000,
+    "maxAge": 5000
+  },
+  "os:blackberry": {},
+  "os:ios": {
+    "horRowPadding": 20
+  },
+  "os:mobileweb": {},
+  "os:windows": {},
+  "dependencies": {}
+}

@@ -1,0 +1,17 @@
+<Alloy>
+	<Collection src="ride" />
+
+	<Tab id="tab" icon="/images/tabIcon_rides.png" titleid="Rides">
+		<Window titleid="Rides">
+			<ListView onItemclick="onItemclick" onDelete="confirmToDeleteRide">
+				<Templates>
+					<Require src="partials/listTemplate" />
+				</Templates>
+				<ListSection dataCollection="ride" dataFilter="dataFilter">
+					<ListItem itemId="{id}" title:text="{fromTimeFormatted}" />
+				</ListSection>
+			</ListView>
+		</Window>
+	</Tab>
+
+</Alloy>

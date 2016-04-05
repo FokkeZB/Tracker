@@ -1,0 +1,6 @@
+<!-- Collection of styled (see TSS) templates to use in different lists -->
+<Alloy>
+  <ItemTemplate name="tpl">
+    <Label bindId="title" class="rowPadding"/>
+  </ItemTemplate>
+</Alloy>

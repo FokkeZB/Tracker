@@ -1,0 +1,43 @@
+"Window[platform=android]": {
+
+	// Use the same color as the bottom Navigation Bar for a nice continuous effect
+	backgroundColor: Alloy.CFG.colors.brandDark,
+
+	// prevent screen from powering down on this window
+	keepScreenOn: true
+}
+
+"Window[platform=ios]": {
+	backgroundColor: Alloy.CFG.colors.brand,
+
+	// Hide the top Navigation Bar for a nice continuous effect with the Status Bar
+	navBarHidden: true
+}
+
+".icon": {
+	font: {
+		fontSize: 150
+	},
+	color: "white"
+}
+
+// On Android the button has a default grey backgroundColor I need to remove
+".icon[platform=android]": {
+	backgroundColor: "transparent"
+}
+
+".toggleTracking": {
+	title: Alloy.Globals.icons.playCircle
+}
+
+".stopTracking": {
+	title: Alloy.Globals.icons.stopCircle
+}
+
+".speedLabel": {
+	bottom: 75,
+	color: "white",
+	font: {
+		fontSize: 40
+	}
+}

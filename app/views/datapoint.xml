@@ -1,0 +1,36 @@
+<Alloy>
+	<Model src="data" instance="true" id="datapoint" />
+
+	<Window id="win" title="{$.datapoint.timestampFormatted}" onClose="onClose">
+		<ActionBar platform="android" displayHomeAsUp="true" onHomeIconItemSelected="close" />
+
+		<ScrollView>
+
+			<View id="map" class="map" module="ti.map" />
+
+			<View platform="android" class="sectionSeparator" />
+
+			<View class="details">
+				<Label class="label" textid="Time" />
+				<Label class="value" text="{$.datapoint.timestampFormatted}" />
+				<Label class="label" textid="Latitude" />
+				<Label class="value" text="{$.datapoint.latitudeFormatted}" />
+				<Label class="label" textid="Longitude" />
+				<Label class="value" text="{$.datapoint.longitudeFormatted}" />
+				<Label class="label" textid="LocationAccuracy" />
+				<Label class="value" text="{$.datapoint.accuracyFormatted}" />
+				<Label class="label" textid="Altitude" />
+				<Label class="value" text="{$.datapoint.altitudeFormatted}" />
+				<Label class="label" textid="AltitudeAccuracy" />
+				<Label class="value" text="{$.datapoint.altitudeAccuracyFormatted}" />
+				<Label class="label" textid="Heading" />
+				<Label class="value" text="{$.datapoint.headingFormatted}" />
+				<Label class="label" textid="Speed" />
+				<Label class="value" text="{$.datapoint.speedFormatted}" />
+			</View>
+
+		</ScrollView>
+
+	</Window>
+
+</Alloy>

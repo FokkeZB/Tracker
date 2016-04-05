@@ -1,0 +1,18 @@
+<Alloy>
+	<Collection src="data" id="data" instance="true" />
+
+	<Window id="win" title="Data">
+		<ActionBar platform="android" displayHomeAsUp="true" onHomeIconItemSelected="close" />
+
+		<ListView onItemclick="openDatapoint">
+			<Templates>
+				<Require src="partials/listTemplate" />
+			</Templates>
+			<ListSection dataCollection="$.data">
+				<ListItem itemId="{id}" title:text="{timestampFormatted}" />
+			</ListSection>
+		</ListView>
+
+	</Window>
+
+</Alloy>

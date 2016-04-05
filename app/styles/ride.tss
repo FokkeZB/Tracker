@@ -1,0 +1,13 @@
+".map": {
+  height: 200,
+  touchEnabled: false
+}
+
+".views[platform=ios]": {
+  style: Ti.UI.iPhone.ListViewStyle.GROUPED,
+  canScroll: false
+}
+
+".view": {
+  accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
+}
