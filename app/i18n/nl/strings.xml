@@ -17,7 +17,7 @@
   <string name="Metric">Metrische</string>
   <string name="Imperial">Engelse</string>
 
-  <string name="About">Over RideTracker</string>
+  <string name="About">Informatie</string>
   <string name="About_Body">Deze app wordt [Open Source](https://github.com/fokkezb) ontwikkeld door [Appcelerator](http://www.appcelerator.com) Developer Evangelist [Fokke Zandbergen](http://fokkezb.nl). In juni 2016 hoopt hij [400km te fietsen](http://fokkezb.nl/rwanda) door Rwanda en €10.000 te werven voor het werk van [Compassion](https://www.compassion.nl/): "Kinderen bevrijden van armoede in Jezus' naam".</string>
   <string name="Donate">Info &amp; Donaties</string>
 </resources>

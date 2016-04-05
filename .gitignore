@@ -11,3 +11,5 @@ tmp
 Thumbs.db
 /i18n
 /platform
+/dist
+/tn.json

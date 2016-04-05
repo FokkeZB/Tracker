@@ -1,4 +1,4 @@
-# RideTracker
+# G.O. Tracker
 
 This app is an Open Source work in progress by [Appcelerator](http://www.appcelerator.com) Developer Evangelist [Fokke Zandbergen](http://fokkezb.nl). He plans to [cycle 400km](http://fokkezb.nl/rwanda) through Rwanda in June 2016 and raise €10.000 for the work of [Compassion](http://www.compassion.com/): *Releasing children from poverty in Jesus' name*.
 

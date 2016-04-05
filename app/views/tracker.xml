@@ -1,6 +1,6 @@
 <Alloy>
-	<Tab id="tab" icon="/images/tabIcon_track.png" titleid="Tracker">
-		<Window titleid="Tracker">
+	<Tab id="tab" icon="/images/tabIcon_track.png" titleid="Track">
+		<Window titleid="Track">
 			<Button id="toggleTracking" class="icon toggleTracking" autoStyle="true" onClick="toggleTracking" />
 			<Label id="speedLabel" class="speedLabel" />
 		</Window>

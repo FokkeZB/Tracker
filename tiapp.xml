@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
   <id>nl.fokkezb.tracker</id>
-  <name>RideTracker</name>
+  <name>G.O. Tracker</name>
   <version>1.0</version>
   <publisher>Fokke Zandbergen</publisher>
   <url>http://fokkezb.nl/rwanda</url>
@@ -14,6 +14,7 @@
   <guid>9edae89e-a1ef-42c8-9b54-1344805042a9</guid>
   <property name="ti.ui.defaultunit" type="string">dp</property>
   <ios>
+    <min-ios-ver>8.0</min-ios-ver>
 
     <!-- Use the builtin Storyboard Launch File with DefaultIcon.png on a blue background -->
     <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
@@ -46,12 +47,23 @@
         <array>
           <string>location</string>
         </array>
+        <key>CFBundleURLTypes</key>
+      	<array>
+      		<dict>
+      			<key>CFBundleURLName</key>
+      			<string>nl.fokkezb.tracker</string>
+      			<key>CFBundleURLSchemes</key>
+      			<array>
+      				<string>gotracker</string>
+      			</array>
+      		</dict>
+      	</array>
       </dict>
     </plist>
   </ios>
   <android xmlns:android="http://schemas.android.com/apk/res/android">
     <manifest>
-      <application android:theme="@style/ridetracker">
+      <application android:theme="@style/tracker">
 
         <!-- API key for nl.fokkezb.tracker and the Titanium development keystore -->
         <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAVtVxzmR1Anv4BBwjr-sI34Z0eccXW1Sc"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<style name="ridetracker" parent="@style/Theme.AppCompat">
+	<style name="tracker" parent="@style/Theme.AppCompat">
 		<item name="colorPrimary">#0054a6</item>
 		<item name="colorAccent">#FFFFFF</item>
 		<item name="android:statusBarColor">#004486</item>

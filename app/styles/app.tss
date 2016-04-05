@@ -21,10 +21,6 @@
 	color: Alloy.CFG.colors.grayDarker
 }
 
-"ListItem": {
-	color: Alloy.CFG.colors.grayDarker
-}
-
 // Set up all ScrollViews to have a vertical layout
 "ScrollView": {
 	scrollType: "vertical",
