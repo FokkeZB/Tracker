@@ -1,6 +1,6 @@
 # Building a Geo Tracker App in Titanium
 
-I have big plans this summer. I hope to cycle 400km through Rwanda (Africa) and raise €10,000 in funds for Compassion, a children aid charity. [Read more about these two challenges](http://fokkezb.nl/rwanda).
+[I have big plans this summer](http://fokkezb.nl/rwanda). I hope to cycle 400km through Rwanda (Africa) and raise €10,000 in funds for Compassion, a children aid charity.
 
 Obviously this means I'm on my bike a lot these days. I've been tracking all my rides using [Ride with GPS](https://ridewithgps.com) from the start, but a few weeks ago I wondered how easy it would be to build such a GPS tracker myself in Titanium.
 
