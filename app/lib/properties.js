@@ -12,7 +12,11 @@ var $ = module.exports = _.extend({
 
 }, Backbone.Events);
 
+// PRIVATE VARIABLES
+
 var _cache = [];
+
+// PRIVATE FUNCTIONS
 
 function set(key, val) {
 

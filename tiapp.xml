@@ -14,6 +14,8 @@
   <guid>9edae89e-a1ef-42c8-9b54-1344805042a9</guid>
   <property name="ti.ui.defaultunit" type="string">dp</property>
   <ios>
+
+    <!-- Minimum of iOS 8 so we don't need fallback Launch Images for older iPhones -->
     <min-ios-ver>8.0</min-ios-ver>
 
     <!-- Use the builtin Storyboard Launch File with DefaultIcon.png on a blue background -->
@@ -58,11 +60,13 @@
       			</array>
       		</dict>
       	</array>
+        <key>CFBundleVersion</key>
+        <string>2</string>
       </dict>
     </plist>
   </ios>
   <android xmlns:android="http://schemas.android.com/apk/res/android">
-    <manifest>
+    <manifest android:versionCode="3">
       <application android:theme="@style/tracker">
 
         <!-- API key for nl.fokkezb.tracker and the Titanium development keystore -->
@@ -83,7 +87,7 @@
     <target device="mobileweb">false</target>
     <target device="windows">false</target>
   </deployment-targets>
-  <sdk-version>5.2.2.GA</sdk-version>
+  <sdk-version>5.4.0.v20160405023842</sdk-version>
   <plugins>
     <plugin version="1.0">ti.alloy</plugin>
   </plugins>

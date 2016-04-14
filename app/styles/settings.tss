@@ -51,5 +51,10 @@
   font: {
     fontSize: 20,
     fontWeight: "bold"
-  }
+  },
+  titleid: "Donate"
+}
+
+".donateBtn[platform=android]": {
+  titleid: "Donate_Android"
 }

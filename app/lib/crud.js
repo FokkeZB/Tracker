@@ -2,7 +2,11 @@
  * Helpers to do CRUD operations on a large number of models, bypassing BB.
  */
 
+// PUBLIC INTERFACE
+//
 exports.confirmToDeleteRide = confirmToDeleteRide;
+
+// PRIVATE FUNCTIONS
 
 function confirmToDeleteRide(rideId, onDelete) {
 

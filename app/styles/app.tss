@@ -1,5 +1,5 @@
 "Window": {
-	backgroundColor: "#FFF",
+	backgroundColor: "#FFF"
 }
 
 "Window[platform=ios]": {

@@ -1,15 +1,18 @@
-var $ = module.exports = {};
+// PUBLIC INTERFACE
 
-$.S4 = function() {
-  return (65536 * (1 + Math.random()) | 0).toString(16).substring(1);
+var $ = module.exports = {
+  guid: guid,
+  mdToAs: mdToAs
 };
 
-$.guid = function() {
-  return $.S4() + $.S4() + "-" + $.S4() + "-" + $.S4() + "-" + $.S4() + "-" + $.S4() + $.S4() + $.S4();
-};
+// PRIVATE FUNCTIONS
+
+function guid() {
+  return S4() + S4() + "-" + S4() + "-" + S4() + "-" + S4() + "-" + S4() + S4() + S4();
+}
 
 // Helper to turn a string with Markdown-links into an Attributed String
-$.mdToAs = function(str) {
+function mdToAs(str) {
   var params = {
     attributes: []
   };
@@ -44,4 +47,8 @@ $.mdToAs = function(str) {
   });
 
   return Ti.UI.createAttributedString(params);
-};
+}
+
+function S4() {
+  return (65536 * (1 + Math.random()) | 0).toString(16).substring(1);
+}

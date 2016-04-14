@@ -2,32 +2,47 @@
  * Library to do the actual tracking.
  */
 
+// DEPENDENCIES
+
 var dialogs = require('alloy/dialogs');
 var permissions = require('permissions');
 var utils = require('utils');
 
-var $ = module.exports = _.clone(Backbone.Events);
+// PUBLIC INTERFACE
+
+var $ = module.exports = _.extend({
+
+  isTracking: isTracking,
+  toggleTracking: toggleTracking,
+  startTracking: startTracking,
+  stopTracking: stopTracking
+
+}, Backbone.Events);
+
+// PRIVATE VARIABLES
 
 var currentRide;
 var configuredMonitoring = false;
 
-$.isTracking = function() {
+// PRIVATE FUNCTIONS
+
+function isTracking() {
   return !!currentRide;
-};
+}
 
-$.toggleTracking = function(cb) {
+function toggleTracking(cb) {
 
-  if ($.isTracking()) {
-    $.stopTracking(cb);
+  if (isTracking()) {
+    stopTracking(cb);
   } else {
-    $.startTracking(cb);
+    startTracking(cb);
   }
 
-};
+}
 
-$.startTracking = function(cb) {
+function startTracking(cb) {
 
-  if ($.isTracking()) {
+  if (isTracking()) {
     return cb({
       success: false,
       error: 'Already tracking'
@@ -55,11 +70,11 @@ $.startTracking = function(cb) {
       type: 'start'
     });
   });
-};
+}
 
-$.stopTracking = function(cb) {
+function stopTracking(cb) {
 
-  if (!$.isTracking()) {
+  if (!isTracking()) {
     return cb({
       success: false,
       error: 'Not tracking'
@@ -81,7 +96,7 @@ $.stopTracking = function(cb) {
   $.trigger('stop', {
     type: 'stop'
   });
-};
+}
 
 function initMonitoring(cb) {
 

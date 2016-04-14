@@ -10,7 +10,7 @@ var utils = require('utils');
   var system = properties.get('system');
   setIdHasCheck(system, true);
 
-  $.aboutBody.attributedString = utils.mdToAs(L('About_Body'));
+  $.aboutBody.attributedString = utils.mdToAs(OS_ANDROID ? L('About_Body_Android') : L('About_Body'));
 
 })();
 
@@ -45,11 +45,10 @@ function onLink(e) {
   Ti.Platform.openURL(e.url);
 }
 
-// Reuse the event listener for the button
 function openDonate() {
-  onLink({
-    url: 'http://fokkezb.nl/rwanda'
-  });
+
+  // Not allowed to use Safari Dialog by Apple
+  Ti.Platform.openURL(OS_ANDROID ? 'https://github.com/fokkezb/tracker' : 'http://fokkezb.nl/rwanda');
 }
 
 // Helper to toggle the checkmark

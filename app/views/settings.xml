@@ -34,7 +34,7 @@
             <Label id="aboutBody" class="rowPadding" onLink="onLink" />
           </TableViewRow>
           <TableViewRow>
-            <Button class="donateBtn rowPadding" titleid="Donate" onClick="openDonate" />
+            <Button class="donateBtn rowPadding" onClick="openDonate" />
           </TableViewRow>
         </TableViewSection>
 

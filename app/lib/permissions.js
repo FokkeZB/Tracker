@@ -2,7 +2,11 @@
  * Hepers for run-time permissions.
  */
 
+// PUBLIC INTERFACE
+
 exports.requestLocationPermissions = requestLocationPermissions;
+
+// PRIVATE FUNCTIONS
 
 function requestLocationPermissions(authorizationType, callback) {
 

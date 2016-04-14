@@ -2,15 +2,23 @@
  * Library to convert and localize units.
  */
 
+// DEPENDENCIES
+
 var properties = require('properties');
+
+// PUBLIC INTERFACE
 
 exports.formatFloat = formatFloat;
 exports.formatSpeed = formatSpeed;
 exports.formatHeading = formatHeading;
 exports.formatLength = formatLength;
 
+// PRIVATE VARIABLES
+
 // Trick to get the decimal separator
 var DECIMAL = String.formatDecimal(1.1, Ti.Locale.currentLocale, '0.0')[1];
+
+// PRIVATE FUNCTIONS
 
 function formatFloat(fl, dec) {
 
