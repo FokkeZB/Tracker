@@ -22,7 +22,7 @@ Since Titanium 5.2.0 you can now use a builtin or custom Xcode Storyboard as Lau
 
 The *G.O. Tracker* uses the builtin in storyboard. This storyboard displays a centered image on a single color background. By default it uses the `DefaultIcon.png` to generate the image and a white background color.
 
-In the app's [tiapp.xml](../tiapp.xml) you can see how I enable the Launch Screen Storyboard and override the default background color to match the blue of the [DefaultIcon.png](../DefaultIcon.png). Finally I set the minimum supported iOS version to 8.0 so I don't need to include traditional Launch Images for older devices. Titanium 5.3 will do this [automatically](https://jira.appcelerator.org/browse/TIMOB-23172).
+In the app's [tiapp.xml](../tiapp.xml#L18) you can see how I enable the Launch Screen Storyboard and override the default background color to match the blue of the [DefaultIcon.png](../DefaultIcon.png). Finally I set the minimum supported iOS version to 8.0 so I don't need to include traditional Launch Images for older devices. Titanium 5.3 will do this [automatically](https://jira.appcelerator.org/browse/TIMOB-23172).
 
 ```xml
   <ios>
