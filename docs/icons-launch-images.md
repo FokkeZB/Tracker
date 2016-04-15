@@ -41,7 +41,7 @@ On Android you can do with less and smaller launch/splash images as well thanks 
 ### How Nine-patch works
 If you zoom into the [background.9.png](../app/platform/android/res/drawable-xxxhdpi/background.9.png) files in the [app/platform/android/res](../app/platform/android/res) folder you'll notice that the PNGs have a 1px transparent border with some black pixels on each side. The black pixels on te top and left side indicate where the image can be stretched while the right and bottom side indicate the area in which any child views need to be contained.
 
-> **NOTE:** Even though the Android documentation still states the padding box (right and bottom pixels) are optional, they are not. Since Android 4.x you will see black blocks across the splash screen if you leave them out.
+> **NOTE:** Even though the Android documentation still states the padding box (right and bottom pixels) are optional, [they are not](https://jira.appcelerator.org/browse/TIMOB-19190). Since Android 4.x you will see black blocks across the splash screen if you leave them out.
 
 ### Generating them with TiCons
 
