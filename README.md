@@ -10,7 +10,7 @@ So, I present to you...
 
 Pronounced *"geo" Tracker*, this initial version simply tracks your geolocation. You can view your previous routes on a map or browse through the individual data points. I plan to add more features in the next two months as I start to use the app for my own rides and hope to have it fairly complete by the time I go to Rwanda in June.
 
-![Screenshots](docs/screenshots.png)
+![Screenshots](docs/assets/screenshots.png)
 
 <p align="center"><a href="https://play.google.com/store/apps/details?id=nl.fokkezb.tracker" target="_blank"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png" width="150" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://itunes.apple.com/us/app/g.o.-tracker-4-compassion/id1100240821?ls=1&mt=8" target="_blank"><img src="https://devimages.apple.com.edgekey.net/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" width="150" /></a></p>
 
@@ -18,7 +18,9 @@ Pronounced *"geo" Tracker*, this initial version simply tracks your geolocation.
 
 As an Appcelerator Developer Evangelist I help developers to build Native Mobile Apps and APIs in JavaScript. One way I do this is by building and blogging about [sample apps](https://github.com/appcelerator-developer-relations).
 
-In this spirit I [open sourced the app on GitHub](https://github.com/fokkezb/tracker) and as I continue to develop the app I will publish blog posts to guide you through the code and share some best practices.
+In this spirit I [open sourced the app on GitHub](https://github.com/fokkezb/tracker) and as I continue to develop the app I will publish blog posts to guide you through the code and share some best practices:
+
+* [How to target more devices with less icons & launch images](docs/icons-launch-images.md)
 
 ## Contribute to the app...or to Compassion
 
