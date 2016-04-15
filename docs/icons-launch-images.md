@@ -1,6 +1,6 @@
 # Tracker: How to target more devices with less icons & launch images
 
-*I recently started [building a Geo Tracker App in Titanium](http://www.appcelerator.com/blog/2016/04/building-a-geo-tracker-app-in-titanium/) and [open sourced the code on GitHub](https://github.com/fokkezb/tracker). I will guide you through the code in a series of blog posts and share some best practices.*
+*I recently started [building a Geo Tracker App in Titanium](http://www.appcelerator.com/blog/2016/04/building-a-geo-tracker-app-in-titanium/) and [open sourced the code on GitHub](https://github.com/fokkezb/tracker). I will guide you through the code in a series of blog posts and share some best practices as I continue to develop the app.*
 
 Let's start with some new Titanium features the app uses.
 
