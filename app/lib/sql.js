@@ -1,10 +1,14 @@
 /**
- * Helpers to do CRUD operations on a large number of models, bypassing BB.
+ * Helpers to do complex SQL queries on a large number of models, bypassing Backbone.
  */
 
+var DB = require('DB');
+var db = DB('_alloy_');
+
 // PUBLIC INTERFACE
-//
+
 exports.confirmToDeleteRide = confirmToDeleteRide;
+exports.calculateAvarageSpeedForRide = calculateAvarageSpeedForRide;
 
 // PRIVATE FUNCTIONS
 
@@ -17,15 +21,15 @@ function confirmToDeleteRide(rideId, onDelete) {
     cancel: 1
   });
 
-  dialog.addEventListener('click', function(e) {
+  dialog.addEventListener('click', function (e) {
 
     if (e.index === 0) {
 
       // A lot more efficient than one by one via Backbone
-      var db = Ti.Database.open('_alloy_');
-      db.execute('DELETE FROM `data` WHERE `ride` = ?', rideId);
-      db.execute('DELETE FROM `rides` WHERE `id` = ?', rideId);
-      db.close();
+      db.transaction(function(con) {
+        con.execute('DELETE FROM `data` WHERE `ride` = ?', rideId);
+        con.execute('DELETE FROM `rides` WHERE `id` = ?', rideId);
+      });
 
       if (_.isFunction(onDelete)) {
         onDelete();
@@ -39,4 +43,8 @@ function confirmToDeleteRide(rideId, onDelete) {
   });
 
   dialog.show();
+}
+
+function calculateAvarageSpeedForRide(rideId) {
+  return db.fetchOne('SELECT AVG(`speed`) FROM `data` WHERE `ride` = ?', rideId);
 }

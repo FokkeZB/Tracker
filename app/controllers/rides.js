@@ -1,4 +1,4 @@
-var crud = require('crud');
+var sql = require('sql');
 
 /**
  * I use a self executing function (SEF) to wrap all code that executes on creation.
@@ -32,5 +32,5 @@ function openChild(win) {
 
 // Event listener for iOS only delete event on the list
 function confirmToDeleteRide(e) {
-  crud.confirmToDeleteRide(e.itemId);
+  sql.confirmToDeleteRide(e.itemId);
 }

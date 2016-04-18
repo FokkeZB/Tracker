@@ -21,42 +21,65 @@ exports.definition = {
       idAttribute: 'id'
     }
   },
-  extendModel: function(Model) {
+  extendModel: function (Model) {
 
     _.extend(Model.prototype, {
 
       // Since Alloy 1.8.2 we can define our transform here instead of where we do data binding
-      transform: function() {
-        var attributes = this.toJSON();
+      transform: function () {
+        var transformed = this.toJSON();
 
-        attributes.timestampFormatted = attributes.timestamp ? moment(attributes.timestamp).format('LTS SSS[ms]') : '';
+        // Use getters to only transform when needed
 
-        if (_.isFinite(attributes.latitude)) {
-          attributes.latitudeFormatted = units.formatFloat(attributes.latitude, 7);
-          attributes.longitudeFormatted = units.formatFloat(attributes.longitude, 7);
-        } else {
-          attributes.latitudeFormatted = L('Unavailable');
-          attributes.longitudeFormatted = L('Unavailable');
-        }
+        Object.defineProperty(transformed, 'timestampFormatted', {
+          get: function () {
+            return transformed.timestamp ? moment(transformed.timestamp).format('LTS SSS[ms]') : '';
+          }
+        });
 
-        if (_.isFinite(attributes.accuracy)) {
-          attributes.accuracyFormatted = units.formatLength(attributes.accuracy);
-        } else {
-          attributes.accuracyFormatted = L('Unavailable');
-        }
+        Object.defineProperty(transformed, 'latitudeFormatted', {
+          get: function () {
+            return _.isFinite(transformed.latitude) ? units.formatFloat(transformed.latitude, 7) : L('Unavailable');
+          }
+        });
 
-        if (_.isFinite(attributes.altitudeAccuracy)) {
-          attributes.altitudeFormatted = units.formatLength(attributes.altitude);
-          attributes.altitudeAccuracyFormatted = units.formatLength(attributes.altitudeAccuracy);
-        } else {
-          attributes.altitudeFormatted = L('Unavailable');
-          attributes.altitudeAccuracyFormatted = L('Unavailable');
-        }
+        Object.defineProperty(transformed, 'longitudeFormatted', {
+          get: function () {
+            return _.isFinite(transformed.longitude) ? units.formatFloat(transformed.longitude, 7) : L('Unavailable');
+          }
+        });
 
-        attributes.headingFormatted = units.formatHeading(attributes.heading);
-        attributes.speedFormatted = units.formatSpeed(attributes.speed);
+        Object.defineProperty(transformed, 'accuracyFormatted', {
+          get: function () {
+            return _.isFinite(transformed.accuracy) ? units.formatLength(transformed.accuracy) : L('Unavailable');
+          }
+        });
 
-        return attributes;
+        Object.defineProperty(transformed, 'altitudeFormatted', {
+          get: function () {
+            return _.isFinite(transformed.altitudeAccuracy) ? units.formatLength(transformed.altitude) : L('Unavailable');
+          }
+        });
+
+        Object.defineProperty(transformed, 'altitudeAccuracyFormatted', {
+          get: function () {
+            return _.isFinite(transformed.altitudeAccuracy) ? units.formatLength(transformed.altitudeAccuracy) : L('Unavailable');
+          }
+        });
+
+        Object.defineProperty(transformed, 'headingFormatted', {
+          get: function () {
+            return units.formatHeading(transformed.heading);
+          }
+        });
+
+        Object.defineProperty(transformed, 'speedFormatted', {
+          get: function () {
+            return units.formatSpeed(transformed.speed);
+          }
+        });
+
+        return transformed;
       }
     });
 

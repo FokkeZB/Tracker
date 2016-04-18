@@ -1,4 +1,4 @@
-var crud = require('crud');
+var sql = require('sql');
 
 var openChild;
 
@@ -8,7 +8,7 @@ var openChild;
 (function() {
 
   openChild = $.args.openChild;
-
+  
   $.ride.fetch({
     id: $.args.rideId
   });
@@ -28,5 +28,5 @@ function close() {
 }
 
 function confirmToDeleteRide(e) {
-  crud.confirmToDeleteRide($.args.rideId, close);
+  sql.confirmToDeleteRide($.args.rideId, close);
 }

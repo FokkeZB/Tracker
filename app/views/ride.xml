@@ -9,7 +9,7 @@
 		</Menu>
 
 		<RightNavButton platform="ios">
-			<Button systemButton="TRASH" onClick="confirmToDeleteRide" />
+			<Button systemButton="Ti.UI.iOS.SystemButton.TRASH" onClick="confirmToDeleteRide" />
 		</RightNavButton>
 
 		<ScrollView>
@@ -23,6 +23,8 @@
 				<Label class="value" text="{$.ride.fromTimeFormatted}" />
 				<Label class="label">To:</Label>
 				<Label class="value" text="{$.ride.toTimeFormatted}" />
+				<Label class="label">Avarage Speed:</Label>
+				<Label class="value" text="{$.ride.avgSpeedFormatted}" />
 			</View>
 
 			<ListView class="views" onItemclick="openView">

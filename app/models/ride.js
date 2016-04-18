@@ -1,4 +1,6 @@
 var moment = require('alloy/moment');
+var units = require('units');
+var sql = require('sql');
 
 exports.definition = {
   config: {
@@ -13,19 +15,37 @@ exports.definition = {
       idAttribute: 'id'
     }
   },
-  extendModel: function(Model) {
+  extendModel: function (Model) {
 
     _.extend(Model.prototype, {
 
       // Since Alloy 1.8.2 we can define our transform here instead of where we do data binding
-      transform: function() {
-        var attributes = this.toJSON();
+      transform: function () {
+        var transformed = this.toJSON();
 
-        attributes.fromTimeFormatted = attributes.fromTime ? moment(attributes.fromTime).format('LLLL') : null;
-        attributes.toTimeFormatted = attributes.toTime ? moment(attributes.toTime).format('LLLL') : null;
+        // Use getters to only transform when needed
 
-        return attributes;
+        Object.defineProperty(transformed, 'fromTimeFormatted', {
+          get: function () {
+            return transformed.fromTime ? moment(transformed.fromTime).format('LLLL') : null;
+          }
+        });
+
+        Object.defineProperty(transformed, 'toTimeFormatted', {
+          get: function () {
+            return transformed.toTime ? moment(transformed.toTime).format('LLLL') : null;
+          }
+        });
+        
+        Object.defineProperty(transformed, 'avgSpeedFormatted', {
+          get: function () {
+            return units.formatSpeed(sql.calculateAvarageSpeedForRide(transformed.id));
+          }
+        });
+
+        return transformed;
       }
+
     });
 
     return Model;
