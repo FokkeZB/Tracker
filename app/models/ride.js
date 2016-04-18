@@ -42,6 +42,12 @@ exports.definition = {
             return units.formatSpeed(sql.calculateAvarageSpeedForRide(transformed.id));
           }
         });
+        
+        Object.defineProperty(transformed, 'totalDistanceFormatted', {
+          get: function () {
+            return units.formatLength(sql.calculateTotalDistanceForRide(transformed.id));
+          }
+        });
 
         return transformed;
       }

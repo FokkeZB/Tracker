@@ -21,6 +21,7 @@ As an Appcelerator Developer Evangelist I help developers to build Native Mobile
 In this spirit I [open sourced the app on GitHub](https://github.com/fokkezb/tracker) and as I continue to develop the app I will publish blog posts to guide you through the code and share some best practices:
 
 * [How to target more devices with less icons & launch images](docs/icons-launch-images.md)
+* [How to protect your global scope and still share variables](docs/global-scope.md)
 
 ## Contribute to the app...or to Compassion
 

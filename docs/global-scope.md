@@ -1,4 +1,4 @@
-# Tracker: Protect your Global Scope
+# Tracker: How to protect your global scope and still share variables
 
 *I recently started [building a Geo Tracker App in Titanium](http://www.appcelerator.com/blog/2016/04/building-a-geo-tracker-app-in-titanium/) to [support Compassion](http://www.fokkezb.nl/rwanda) and [open-sourced the code](../) for us all to learn from. I will guide you through the code in a series of blog posts and share some best practices as I continue to develop the app.*
 

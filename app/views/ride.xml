@@ -23,6 +23,8 @@
 				<Label class="value" text="{$.ride.fromTimeFormatted}" />
 				<Label class="label">To:</Label>
 				<Label class="value" text="{$.ride.toTimeFormatted}" />
+				<Label class="label">Total Distance:</Label>
+				<Label class="value" text="{$.ride.totalDistanceFormatted}" />
 				<Label class="label">Avarage Speed:</Label>
 				<Label class="value" text="{$.ride.avgSpeedFormatted}" />
 			</View>
