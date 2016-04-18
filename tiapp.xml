@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
   <id>nl.fokkezb.tracker</id>
-  <name>G.O. Tracker</name>
+  <name>Tracker</name>
   <version>1.0</version>
   <publisher>Fokke Zandbergen</publisher>
   <url>http://fokkezb.nl/rwanda</url>
@@ -56,7 +56,7 @@
       			<string>nl.fokkezb.tracker</string>
       			<key>CFBundleURLSchemes</key>
       			<array>
-      				<string>gotracker</string>
+      				<string>tracker</string>
       			</array>
       		</dict>
       	</array>

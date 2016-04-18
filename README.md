@@ -1,4 +1,4 @@
-# Building a Geo Tracker App in Titanium
+# Building a GPS Tracker App in Titanium
 
 [I have big plans this summer](http://fokkezb.nl/rwanda). I hope to cycle 400km through Rwanda (Africa) and raise €10,000 in funds for Compassion, a children aid charity.
 
@@ -6,9 +6,9 @@ Obviously this means I'm on my bike a lot these days. I've been tracking all my 
 
 So, I present to you...
 
-## G.O. Tracker 4 Compassion
+## Tracker 4 Compassion
 
-Pronounced *"geo" Tracker*, this initial version simply tracks your geolocation. You can view your previous routes on a map or browse through the individual data points. I plan to add more features in the next two months as I start to use the app for my own rides and hope to have it fairly complete by the time I go to Rwanda in June.
+This initial version simply tracks your geolocation. You can view your previous routes on a map or browse through the individual data points. I plan to add more features in the next two months as I start to use the app for my own rides and hope to have it fairly complete by the time I go to Rwanda in June.
 
 ![Screenshots](docs/assets/screenshots.png)
 

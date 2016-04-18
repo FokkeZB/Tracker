@@ -1,8 +1,8 @@
 <Alloy>
 	<Collection src="ride" />
 
-	<Tab id="tab" icon="/images/tabIcon_rides.png" titleid="Rides">
-		<Window titleid="Rides">
+	<Tab id="tab" icon="/images/tabIcon_rides.png" titleid="Activity">
+		<Window titleid="Activity">
 			<ListView onItemclick="onItemclick" onDelete="confirmToDeleteRide">
 				<Templates>
 					<Require src="partials/listTemplate" />
