@@ -50,6 +50,8 @@ function startTracking(cb) {
   }
 
   initMonitoring(function(e) {
+    
+    console.log('initMonitoring', e);
 
     if (!e.success) {
       return cb(e);

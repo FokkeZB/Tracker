@@ -2,6 +2,9 @@
  * Hepers for run-time permissions.
  */
 
+// DEPENDENCIES
+var dialogs = require('alloy/dialogs');
+
 // PUBLIC INTERFACE
 
 exports.requestLocationPermissions = requestLocationPermissions;
