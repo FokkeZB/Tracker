@@ -1,6 +1,6 @@
 # Tracker: How to target more devices with less icons & launch images
 
-*I recently started [building a Geo Tracker App in Titanium](http://www.appcelerator.com/blog/2016/04/building-a-geo-tracker-app-in-titanium/) and [open sourced the code on GitHub](https://github.com/fokkezb/tracker). I will guide you through the code in a series of blog posts and share some best practices.*
+*I recently started [building a Geo Tracker App in Titanium](http://www.appcelerator.com/blog/2016/04/building-a-geo-tracker-app-in-titanium/) to [support Compassion](http://www.fokkezb.nl/rwanda) and [open-sourced the code](../) for us all to learn from. I will guide you through the code in a series of blog posts and share some best practices as I continue to develop the app.*
 
 Let's start with some new Titanium features the app uses.
 
@@ -22,7 +22,7 @@ Since Titanium 5.2.0 you can now use a builtin or custom Xcode Storyboard as Lau
 
 The *G.O. Tracker* uses the builtin in storyboard. This storyboard displays a centered image on a single color background. By default it uses the `DefaultIcon.png` to generate the image and a white background color.
 
-In the app's [tiapp.xml](../tiapp.xml) you can see how I enable the Launch Screen Storyboard and override the default background color to match the blue of the [DefaultIcon.png](../DefaultIcon.png). Finally I set the minimum supported iOS version to 8.0 so I don't need to include traditional Launch Images for older devices. Titanium 5.3 will do this [automatically](https://jira.appcelerator.org/browse/TIMOB-23172).
+In the app's [tiapp.xml](../tiapp.xml#L18) you can see how I enable the Launch Screen Storyboard and override the default background color to match the blue of the [DefaultIcon.png](../DefaultIcon.png). Finally I set the minimum supported iOS version to 8.0 so I don't need to include traditional Launch Images for older devices. Titanium 5.3 will do this [automatically](https://jira.appcelerator.org/browse/TIMOB-23172).
 
 ```xml
   <ios>
@@ -41,7 +41,7 @@ On Android you can do with less and smaller launch/splash images as well thanks 
 ### How Nine-patch works
 If you zoom into the [background.9.png](../app/platform/android/res/drawable-xxxhdpi/background.9.png) files in the [app/platform/android/res](../app/platform/android/res) folder you'll notice that the PNGs have a 1px transparent border with some black pixels on each side. The black pixels on te top and left side indicate where the image can be stretched while the right and bottom side indicate the area in which any child views need to be contained.
 
-> **NOTE:** Even though the Android documentation still states the padding box (right and bottom pixels) are optional, they are not. Since Android 4.x you will see black blocks across the splash screen if you leave them out.
+> **NOTE:** Even though the Android documentation still states the padding box (right and bottom pixels) are optional, [they are not](https://jira.appcelerator.org/browse/TIMOB-19190). Since Android 4.x you will see black blocks across the splash screen if you leave them out.
 
 ### Generating them with TiCons
 
