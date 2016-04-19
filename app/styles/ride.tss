@@ -1,6 +1,20 @@
+"Window[platform=ios]": {
+  backgroundColor: "#EFEFF4" // same color as grouped listview
+}
+
 ".map": {
   height: 200,
   touchEnabled: false
+}
+
+".views[platform=ios]": {
+  height: Ti.UI.SIZE
+}
+
+".views[platform=android]": {
+
+  // FIXME: On Android Ti.UI.SIZE will make it 0
+  height: 95
 }
 
 ".views[platform=ios]": {

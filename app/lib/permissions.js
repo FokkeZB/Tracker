@@ -42,18 +42,7 @@ function requestLocationPermissions(authorizationType, callback) {
         title: 'You denied permission before',
         message: 'Tap Yes to open the Settings app to restore permissions, then try again.',
         callback: function() {
-
-          if (OS_IOS) {
-            Ti.Platform.openURL(Ti.App.iOS.applicationOpenSettingsURL);
-          }
-
-          if (OS_ANDROID) {
-            var intent = Ti.Android.createIntent({
-              action: 'android.settings.APPLICATION_SETTINGS',
-            });
-            intent.addFlags(Ti.Android.FLAG_ACTIVITY_NEW_TASK);
-            Ti.Android.currentActivity.startActivity(intent);
-          }
+          Ti.Platform.openURL(Ti.App.iOS.applicationOpenSettingsURL);
         }
       });
 

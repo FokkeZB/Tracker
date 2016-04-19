@@ -65,8 +65,9 @@
 
 ".details": {
   height: Ti.UI.SIZE,
-
   layout: "vertical",
+  
+  backgroundColor: "white"
 }
 
 ".label": {
