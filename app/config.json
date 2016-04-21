@@ -12,6 +12,7 @@
     "minUpdateDistance": 1,
     "trackDelta": 0.075,
     "pointDelta": 0.5,
+    "msToPause": 5000,
     "settings": {
       "system": {
         "type": "string",

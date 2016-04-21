@@ -12,6 +12,7 @@ var utils = require('utils');
 
 var $ = module.exports = _.extend({
 
+  getCurrentRide: getCurrentRide,
   isTracking: isTracking,
   toggleTracking: toggleTracking,
   startTracking: startTracking,
@@ -26,8 +27,12 @@ var configuredMonitoring = false;
 
 // PRIVATE FUNCTIONS
 
+function getCurrentRide() {
+  return currentRide;
+}
+
 function isTracking() {
-  return !!currentRide;
+  return !!getCurrentRide();
 }
 
 function toggleTracking(cb) {
@@ -50,7 +55,7 @@ function startTracking(cb) {
   }
 
   initMonitoring(function(e) {
-    
+
     if (!e.success) {
       return cb(e);
     }
@@ -62,11 +67,16 @@ function startTracking(cb) {
 
     Ti.Geolocation.addEventListener('location', onLocation);
 
+    if (OS_IOS) {
+      Ti.Geolocation.addEventListener('locationupdatepaused', onLocationupdate);
+      Ti.Geolocation.addEventListener('locationupdateresumed', onLocationupdate);
+    }
+
     cb({
       success: true
     });
 
-    $.trigger('start', {
+    $.trigger('state state:start', {
       type: 'start'
     });
   });
@@ -83,6 +93,11 @@ function stopTracking(cb) {
 
   Ti.Geolocation.removeEventListener('location', onLocation);
 
+  if (OS_IOS) {
+    Ti.Geolocation.removeEventListener('locationupdatepaused', onLocationupdate);
+    Ti.Geolocation.removeEventListener('locationupdateresumed', onLocationupdate);
+  }
+
   currentRide.save({
     toTime: Date.now()
   });
@@ -93,7 +108,7 @@ function stopTracking(cb) {
     success: true
   });
 
-  $.trigger('stop', {
+  $.trigger('state state:stop', {
     type: 'stop'
   });
 }
@@ -108,6 +123,8 @@ function initMonitoring(cb) {
         Ti.Geolocation.accuracy = Ti.Geolocation.ACCURACY_BEST;
         Ti.Geolocation.distanceFilter = Alloy.CFG.minUpdateDistance;
         Ti.Geolocation.preferredProvider = Ti.Geolocation.PROVIDER_GPS;
+        Ti.Geolocation.pauseLocationUpdateAutomatically = true;
+        Ti.Geolocation.activityType = Ti.Geolocation.ACTIVITYTYPE_FITNESS;
       }
 
       if (OS_ANDROID) {
@@ -166,4 +183,12 @@ function onLocation(e) {
 
     $.trigger('data', data);
   }
+}
+
+function onLocationupdate(e) {
+  var state = (e.type === 'locationupdatepaused' ? 'pause' : 'resume');
+
+  $.triger('state state:' + state, {
+    type: state
+  });
 }

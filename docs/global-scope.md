@@ -110,7 +110,7 @@ In [app/alloy.js](../app/alloy.js#L4) you can see I use `Alloy.Globals` to keep 
 
 ## Using SEFs in Controllers
 
-You might also have noticed I use SEFs in controllers (and libraries) as well. This is not to protect the scope like in `app/alloy.js` but simply to keep my code organised. As I mentioned CommonJS modules are only executed once and instead of by grouping it in a SEF I try to make it clear that there's no other code in between or following all of the functions that executes at that time.
+You might also have noticed I use SEFs in controllers (and libraries) as well. This is not to protect the scope like in `app/alloy.js` but simply to keep my code organised. As I mentioned CommonJS modules are only executed once and by grouping it in a SEF I try to make it clear that there's no other code in between or following all of the functions that executes at that time.
 
 ## Stop using Ti.include()
 

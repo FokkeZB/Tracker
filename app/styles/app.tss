@@ -66,7 +66,7 @@
 ".details": {
   height: Ti.UI.SIZE,
   layout: "vertical",
-  
+
   backgroundColor: "white"
 }
 
@@ -88,4 +88,8 @@
   bottom: Alloy.CFG.horRowPadding,
 
   height: Ti.UI.SIZE
+}
+
+".alignRight": {
+	textAlign: Ti.UI.TEXT_ALIGNMENT_RIGHT,
 }

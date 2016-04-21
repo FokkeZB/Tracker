@@ -1,12 +1,20 @@
+// DEPENDENCIES
+
+var sql = require('sql');
 var track = require('track');
 var units = require('units');
+
+// PRIVATE
+
+var durationInterval;
+var lastData;
 
 /**
  * I use a self executing function (SEF) to wrap all code that executes on creation.
  */
 (function() {
 
-  track.on('start stop', onStartStop);
+  track.on('state', onState);
   track.on('data', onData);
 
   // On Android we simply set keepScreenOn per Window
@@ -30,19 +38,56 @@ function toggleTracking() {
 }
 
 // Uses Alloy dynamic styling to change the button icon
-function onStartStop(e) {
+function onState(e) {
+
+  console.log(e);
 
   if (e.type === 'start') {
-    $.addClass($.toggleTracking, 'stopTracking');
-  } else {
-    $.removeClass($.toggleTracking, 'stopTracking');
+    $.addClass($.toggleBtn, 'toggleBtnTracking');
+
+    $.info.animate({
+      opacity: 1
+    });
+
+    durationInterval = setInterval(onInterval, 1000);
+
+  } else if (e.type === 'stop') {
+    $.removeClass($.toggleBtn, 'toggleBtnTracking');
 
     $.speedLabel.text = '';
+    $.avgSpeedLabel.text = '';
+
+    $.distanceLabel.text = '';
+    $.durationLabel.text = '';
+
+    $.info.animate({
+      opacity: 0
+    });
+
+    clearInterval(durationInterval);
   }
 }
 
 function onData(e) {
-  $.speedLabel.text = units.formatSpeed(e.speed);
+  lastData = e;
+
+  var t = track.getCurrentRide().transform();
+
+  $.speedLabel.text = units.formatSpeed(lastData.speed);
+  $.avgSpeedLabel.text = t.avgSpeedFormatted;
+
+  $.distanceLabel.text = t.distanceFormatted;
+  $.durationLabel.text = t.durationFormatted;
+}
+
+function onInterval() {
+  var t = track.getCurrentRide().transform();
+
+  $.durationLabel.text = t.durationFormatted;
+
+  if (Date.now() - lastData.timestamp > Alloy.CFG.msToPause) {
+    $.speedLabel.text = units.formatSpeed(0);
+  }
 }
 
 function onSelectionChange(e) {

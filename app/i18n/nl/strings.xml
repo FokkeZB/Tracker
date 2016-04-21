@@ -3,6 +3,8 @@
   <string name="Activity">Activiteit</string>
   <string name="Settings">Instellingen</string>
 
+  <string name="AvarageMovingSpeed">Gemiddelde Actieve Snelheid</string>
+
   <string name="Unavailable">Niet Beschikbaar</string>
   <string name="Time">Tijd</string>
   <string name="Latitude">Breedtegraad</string>

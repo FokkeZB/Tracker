@@ -18,7 +18,7 @@
 }
 
 ".views[platform=ios]": {
-  style: Ti.UI.iOS.ListViewStyle.GROUPED,
+  style: Ti.UI.iPhone.ListViewStyle.GROUPED,
   canScroll: false
 }
 

@@ -12,6 +12,7 @@ exports.formatFloat = formatFloat;
 exports.formatSpeed = formatSpeed;
 exports.formatHeading = formatHeading;
 exports.formatLength = formatLength;
+exports.formatDuration = formatDuration;
 
 // PRIVATE VARIABLES
 
@@ -84,7 +85,7 @@ function formatLength(m) {
   if (imperial()) {
     v = m / 0.3048;
 
-    if (v > 4000) {
+    if (v > 750) {
       v = v / 5280;
       abbr = 'mi';
     } else {
@@ -106,6 +107,28 @@ function formatLength(m) {
   return formatFloat(v, 1) + ' ' + abbr;
 }
 
+function formatDuration(ms) {
+  var s = Math.round(ms / 1000);
+  var m = Math.floor(s / 60);
+  var h = Math.floor(m / 60);
+
+  if (h > 0) {
+    m = m % 60;
+  }
+
+  s = s % 60;
+
+  var str = lpad(s.toString(), 2, '0');
+
+  if (h > 0) {
+    str = h.toString() + ':' + lpad(m.toString(), 2, '0') + ':' + str;
+  } else {
+    str = m.toString() + ':' + str;
+  }
+
+  return str;
+}
+
 function imperial() {
   return system() === 'imperial';
 }
@@ -118,4 +141,14 @@ function round(val, dec) {
   var factor = dec ? Math.pow(10, dec) : 1;
 
   return Math.round(val * factor) / factor;
+}
+
+function lpad(str, length, char) {
+  char || (char = ' ');
+
+  if (str.length >= length) {
+    return str;
+  }
+
+  return (new Array(length - str.length + 1)).join(char) + str;
 }

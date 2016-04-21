@@ -9,7 +9,7 @@
 		</Menu>
 
 		<RightNavButton platform="ios">
-			<Button systemButton="Ti.UI.iOS.SystemButton.TRASH" onClick="confirmToDeleteRide" />
+			<Button systemButton="TRASH" onClick="confirmToDeleteRide" />
 		</RightNavButton>
 
 		<ScrollView>
@@ -19,13 +19,15 @@
 			<View platform="android" class="sectionSeparator" />
 
 			<View class="details">
-				<Label class="label">From:</Label>
+				<Label class="label" textid="From" />
 				<Label class="value" text="{$.ride.fromTimeFormatted}" />
-				<Label class="label">To:</Label>
+				<Label class="label" textid="To" />
 				<Label class="value" text="{$.ride.toTimeFormatted}" />
-				<Label class="label">Total Distance:</Label>
-				<Label class="value" text="{$.ride.totalDistanceFormatted}" />
-				<Label class="label">Avarage Speed:</Label>
+				<Label class="label" textid="Duration" />
+				<Label class="value" text="{$.ride.durationFormatted}" />
+				<Label class="label" textid="Distance" />
+				<Label class="value" text="{$.ride.distanceFormatted}" />
+				<Label class="label" textid="AvarageMovingSpeed" />
 				<Label class="value" text="{$.ride.avgSpeedFormatted}" />
 			</View>
 

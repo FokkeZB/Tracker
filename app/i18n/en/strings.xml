@@ -3,6 +3,8 @@
   <string name="Activity">Activity</string>
   <string name="Settings">Settings</string>
 
+  <string name="AvarageMovingSpeed">Avarage Moving Speed</string>
+
   <string name="Unavailable">Unavailable</string>
   <string name="Time">Time</string>
   <string name="Latitude">Latitude</string>

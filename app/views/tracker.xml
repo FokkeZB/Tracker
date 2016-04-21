@@ -1,8 +1,33 @@
 <Alloy>
 	<Tab id="tab" icon="/images/tabIcon_track.png" titleid="Track">
 		<Window titleid="Track">
-			<Button id="toggleTracking" class="icon toggleTracking" autoStyle="true" onClick="toggleTracking" />
-			<Label id="speedLabel" class="speedLabel" />
+
+			<Button id="toggleBtn" class="icon toggleBtn" autoStyle="true" onClick="toggleTracking" />
+
+			<View id="info" class="info">
+
+				<View class="details detailsLeft">
+
+					<Label class="label" textid="CurrentSpeed" />
+					<Label id="speedLabel" class="value" />
+
+					<Label class="label" textid="AvarageMovingSpeed" />
+					<Label id="avgSpeedLabel" class="value" />
+
+				</View>
+
+				<View class="details detailsRight">
+
+					<Label class="label alignRight" textid="Distance" />
+					<Label id="distanceLabel" class="value alignRight" />
+
+					<Label class="label alignRight" textid="Duration" />
+					<Label id="durationLabel" class="value alignRight" />
+
+				</View>
+
+			</View>
+
 		</Window>
 	</Tab>
 </Alloy>

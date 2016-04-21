@@ -14,9 +14,10 @@
 	navBarHidden: true
 }
 
-".icon": {
+".toggleBtn": {
+	title: Alloy.Globals.icons.playCircle,
 	font: {
-		fontSize: 150
+		fontSize: 120
 	},
 	color: "white"
 }
@@ -26,18 +27,29 @@
 	backgroundColor: "transparent"
 }
 
-".toggleTracking": {
-	title: Alloy.Globals.icons.playCircle
-}
-
-".stopTracking": {
+".toggleBtnTracking": {
 	title: Alloy.Globals.icons.stopCircle
 }
 
-".speedLabel": {
-	bottom: 75,
+".info": {
+	height: Ti.UI.SIZE,
+	bottom: Alloy.CFG.verRowPadding,
+
+	opacity: 0
+}
+
+".details": {
+	backgroundColor: 'transparent'
+}
+
+".label": {
+	color: "white"
+}
+
+".value": {
 	color: "white",
+
 	font: {
-		fontSize: 40
+		fontSize: 30
 	}
 }

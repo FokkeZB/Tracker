@@ -6,11 +6,11 @@
 // IOS
 
 "TableView[platform=ios]": {
-  style: Ti.UI.iOS.TableViewStyle.GROUPED
+  style: Ti.UI.iPhone.TableViewStyle.GROUPED
 }
 
 "TableViewRow[platform=ios]": {
-  selectionStyle: Ti.UI.iOS.TableViewCellSelectionStyle.NONE
+  selectionStyle: Ti.UI.iPhone.TableViewCellSelectionStyle.NONE
 }
 
 ".unitsSection[platform=ios]": {
