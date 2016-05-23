@@ -188,7 +188,7 @@ function onLocation(e) {
 function onLocationupdate(e) {
   var state = (e.type === 'locationupdatepaused' ? 'pause' : 'resume');
 
-  $.triger('state state:' + state, {
+  $.trigger('state state:' + state, {
     type: state
   });
 }
