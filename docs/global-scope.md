@@ -94,7 +94,7 @@ require('state').counter++;
 
 CommonJS modules are only executed when they are first required. Every following call to `require()` will return the previously constructed exported object, which makes it really fast and ideal for stateful data.
 
-In the app [app/lib/tracker.js](../app/lib/tracker.js#L24) is a good example as it keeps track of the `currentRide` in a stateful private variable and can be required anywhere to check of change the state using its public interface.
+In the app [app/lib/tracker.js](../app/lib/track.js#L25) is a good example as it keeps track of the `currentRide` in a stateful private variable and can be required anywhere to check of change the state using its public interface.
 
 ## Config.json
 
