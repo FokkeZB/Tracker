@@ -1,0 +1,27 @@
+<resources>
+  <string name="Track">Verfolgen</string>
+  <string name="Activity">Aktivität</string>
+  <string name="Settings">Einstellungen</string>
+
+  <string name="AvarageMovingSpeed">Durchschnittliche Geschwindigkeit</string>
+
+  <string name="Unavailable">Nicht verfügbar</string>
+  <string name="Time">Zeit</string>
+  <string name="Latitude">Breitengrad</string>
+  <string name="Longitude">Längengrad</string>
+  <string name="LocationAccuracy">Standortgenauigkeit</string>
+  <string name="Altitude">Höhe</string>
+  <string name="AltitudeAccuracy">Höhengenauigkeit</string>
+  <string name="Heading">Ausrichtung</string>
+  <string name="Speed">Geschwindigkeit</string>
+
+  <string name="Units">Einheiten</string>
+  <string name="Metric">Metrik</string>
+  <string name="Imperial">Imperial</string>
+
+  <string name="About">Über</string>
+  <string name="About_Body">Diese App ist ein [Open Source](https://github.com/fokkezb/tracker)-Projekt des [Appcelerator](http://www.appcelerator.com)-Developer-Evangelisten [Fokke Zandbergen](http://fokkezb.nl). Er plant, im Juni 2016 [400 km](http://fokkezb.nl/rwanda) durch Rwanda zu fahren und €10.000 für die Arbeit von [Compassion](http://www.compassion.com/) zu erzielen: "Releasing children from poverty in Jesus name" (Englisch).</string>
+  <string name="About_Body_Android">Diese App ist ein [Open Source](https://github.com/fokkezb/tracker)-Projekt des [Appcelerator](http://www.appcelerator.com)-Developer-Evangelisten [Fokke Zandbergen](http://fokkezb.nl). Er plant, im Juni 2016 [400 km](http://fokkezb.nl/rwanda) durch Rwanda zu fahren und €10.000 für die Arbeit von [Compassion](http://www.compassion.com/) zu erzielen: "Releasing children from poverty in Jesus name" (Englisch).</string>
+  <string name="Donate">Informationen &amp; Spenden</string>
+  <string name="Donate_Android">Mehr Erfahren</string>
+</resources>
