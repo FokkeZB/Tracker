@@ -42,7 +42,7 @@
 					<ListItem class="view" itemId="data" title:text="Data" />
 					<ListItem class="view" itemId="map" title:text="Map" />
 				</ListSection>
-			</ListView>>
+			</ListView>
 
 		</ScrollView>
 
