@@ -1,5 +1,5 @@
 if (OS_ANDROID) {
-    $.win.addEventListener('androidback', function () {
+    $.index.addEventListener('androidback', function () {
         var intent = Ti.Android.createIntent({
             action: Ti.Android.ACTION_MAIN
         });
